@@ -2,11 +2,12 @@
 {% block titulo %}Inicio{% endblock %}
 
 {% block contenido %}
-    <h1>¡Bienvenido, {{ user.username }}!</h1>
+    <h1>¡Bienvenido, {{ user.first_name|default:user.username }}!</h1>
     <p class="subtitulo">Iniciaste sesión correctamente en el sistema.</p>
 
     <div class="mensaje-exito">
         Tu cuenta ({{ user.email|default:"sin correo registrado" }}) está autenticada.
+        {% if user.perfil %}<br>Rol: <strong>{{ user.perfil.rol }}</strong>{% endif %}
     </div>
 
     <form method="post" action="{% url 'logout' %}">

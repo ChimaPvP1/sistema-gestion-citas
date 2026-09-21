@@ -7,13 +7,13 @@
 
     {% if form.errors %}
         <p class="mensaje-exito" style="background:#fdecea; color:#b42318;">
-            Usuario o contraseña incorrectos.
+            Correo/usuario o contraseña incorrectos.
         </p>
     {% endif %}
 
     <form method="post">
         {% csrf_token %}
-        <label for="id_username">Usuario</label>
+        <label for="id_username">Correo o usuario</label>
         <input type="text" name="username" id="id_username" required autofocus>
 
         <label for="id_password">Contraseña</label>

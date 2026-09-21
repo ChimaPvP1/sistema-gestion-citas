@@ -44,14 +44,23 @@
             margin-bottom: 4px;
             margin-top: 14px;
         }
-        input[type=text], input[type=email], input[type=password] {
+        input[type=text], input[type=email], input[type=password], select {
             width: 100%;
             padding: 10px 12px;
             border: 1px solid #d1d5db;
             border-radius: 6px;
             font-size: 14px;
+            background: #ffffff;
         }
-        input:focus { outline: none; border-color: #2f6f8f; }
+        input:focus, select:focus { outline: none; border-color: #2f6f8f; }
+        .fila-doble {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+            gap: 12px;
+        }
+        @media (max-width: 420px) {
+            .fila-doble { grid-template-columns: minmax(0, 1fr); }
+        }
         button, .boton {
             width: 100%;
             padding: 11px;

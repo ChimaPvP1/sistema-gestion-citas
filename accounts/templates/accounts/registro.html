@@ -12,17 +12,39 @@
         {{ form.username }}
         {{ form.username.errors }}
 
+        <div class="fila-doble">
+            <div>
+                <label for="id_nombre">Nombre</label>
+                {{ form.nombre }}
+                {{ form.nombre.errors }}
+            </div>
+            <div>
+                <label for="id_documento">Documento</label>
+                {{ form.documento }}
+                {{ form.documento.errors }}
+            </div>
+        </div>
+
         <label for="id_email">Correo electrónico</label>
         {{ form.email }}
         {{ form.email.errors }}
 
-        <label for="id_password1">Contraseña</label>
-        {{ form.password1 }}
-        {{ form.password1.errors }}
+        <div class="fila-doble">
+            <div>
+                <label for="id_password1">Contraseña</label>
+                {{ form.password1 }}
+                {{ form.password1.errors }}
+            </div>
+            <div>
+                <label for="id_password2">Confirmar</label>
+                {{ form.password2 }}
+                {{ form.password2.errors }}
+            </div>
+        </div>
 
-        <label for="id_password2">Confirmar contraseña</label>
-        {{ form.password2 }}
-        {{ form.password2.errors }}
+        <label for="id_rol">Rol</label>
+        {{ form.rol }}
+        {{ form.rol.errors }}
 
         <button type="submit">Crear cuenta</button>
     </form>
