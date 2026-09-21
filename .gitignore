@@ -1,0 +1,14 @@
+# Entorno virtual
+venv/
+env/
+
+# Python
+__pycache__/
+*.pyc
+
+# Base de datos local (cada quien genera la suya con migrate)
+db.sqlite3
+
+# Config del editor
+.vscode/
+.idea/

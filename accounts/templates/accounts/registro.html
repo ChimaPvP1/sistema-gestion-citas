@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block titulo %}Crear cuenta{% endblock %}
+
+{% block contenido %}
+    <h1>Crear cuenta</h1>
+    <p class="subtitulo">Sistema de Gestión de Citas y Atención</p>
+
+    <form method="post">
+        {% csrf_token %}
+
+        <label for="id_username">Usuario</label>
+        {{ form.username }}
+        {{ form.username.errors }}
+
+        <label for="id_email">Correo electrónico</label>
+        {{ form.email }}
+        {{ form.email.errors }}
+
+        <label for="id_password1">Contraseña</label>
+        {{ form.password1 }}
+        {{ form.password1.errors }}
+
+        <label for="id_password2">Confirmar contraseña</label>
+        {{ form.password2 }}
+        {{ form.password2.errors }}
+
+        <button type="submit">Crear cuenta</button>
+    </form>
+
+    <p class="enlace-secundario">
+        ¿Ya tienes cuenta? <a href="{% url 'login' %}">Inicia sesión</a>
+    </p>
+{% endblock %}
